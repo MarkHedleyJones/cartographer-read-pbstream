@@ -1,7 +1,7 @@
 import argparse
 from collections import defaultdict
 
-from pbstream.reader import PBstream_Reader
+from reader import PBstream_Reader
 
 
 if __name__ == "__main__":
