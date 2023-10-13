@@ -1,5 +1,4 @@
 import argparse
-import copy
 from collections import defaultdict
 
 from pbstream.reader import PBstream_Reader
