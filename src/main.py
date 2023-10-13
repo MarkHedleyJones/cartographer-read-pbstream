@@ -4,13 +4,12 @@ from collections import defaultdict
 
 from pbstream.reader import PBstream_Reader
 
-import open3d as o3d
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "action",
-        choices=["info", "trajectory"],
+        choices=["info", "plot"],
         help=(
             'action "info" prints some information about the map, "trajectory" plots'
             " the trajectory "
@@ -21,7 +20,9 @@ if __name__ == "__main__":
 
     if ARGS.action == "info":
         PBstream_Reader.info(ARGS.inputfile)
-    elif ARGS.action == "trajectory":
+    elif ARGS.action == "plot":
+        import open3d as o3d
+
         loaded = defaultdict(list)
         with PBstream_Reader(ARGS.inputfile) as reader:
             for msg in reader:
