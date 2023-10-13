@@ -10,7 +10,7 @@ Export the proto description from cartographer
 
 ## Print info
 
-``python main.py info --inputfile=<*.pbstream file>`` to print a summary about a file. 
+``python src/main.py info --inputfile=<*.pbstream file>`` to print a summary about a file.
 
 This is an example output for the ``b3-2016-04-05-14-14-00.bag`` used in this
 [demo](https://google-cartographer-ros.readthedocs.io/en/latest/assets_writer.html)
@@ -29,8 +29,13 @@ Field: imu_data                      	305059 entries
 Process finished with exit code 0
 ```
 
+
+## Print trajectory
+
+``python src/main.py trajectory --inputfile=<*.pbstream file>``
+
 ## Plot trajectory
 
-``python main.py trajectory --inputfile=<*.pbstream file>`` plots the trajectory using open3d
+``python src/main.py plot --inputfile=<*.pbstream file>`` plots the trajectory using open3d
 
 ![Resulting image](imgs/screenshot.png)
